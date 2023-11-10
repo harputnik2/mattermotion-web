@@ -1,0 +1,41 @@
+@import '../../../styles/variables.scss';
+
+.row {
+  display: flex;
+  margin: 0 (-$spacing-xl);
+  flex-wrap: wrap;
+  &.smallPadding {
+    margin: 0 (-$spacing-s);
+  }
+  &.mediumPadding {
+    margin: 0 (-$spacing-m);
+  }
+}
+
+@media screen and (max-width: $breakpoint-max-small) {
+  .row {
+    margin: 0 (-$spacing-l);
+    &.smallPadding {
+      margin: 0 (-$spacing-xs);
+    }
+    &.mediumPadding {
+      margin: 0 (-$spacing-s);
+    }
+  }
+  .row:not(.forceMobileColumns) {
+    display: block;
+  }
+}
+
+@media screen and (min-width: $breakpoint-min-huge) {
+  .row {
+    margin: 0 auto;
+    max-width: 1460px;
+    &.smallPadding {
+      margin: 0 auto;
+    }
+    &.mediumPadding {
+      margin: 0 auto;
+    }
+  }
+}

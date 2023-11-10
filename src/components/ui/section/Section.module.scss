@@ -1,0 +1,68 @@
+@import '../../../styles/variables.scss';
+
+.section {
+  padding: $spacing-l 0;
+  position: relative;
+  width: 100%;
+  &:before, &:after {
+    z-index: 1;
+    content: '';
+    display: block;
+    background-color: $black;
+    position: absolute;
+    left: 50%;
+    top: 0;
+  }
+  &:before {
+    width: 2*$spacing-xl;
+    height: 1px;
+    transform: translate(-50%, 0);
+  }
+  &:after {
+    width: 1px;
+    height: 100%;
+  }
+}
+
+.darkSection {
+  background-color: $dark-brown;
+  color: $white;
+  padding: 2*$spacing-l 0;
+  &:before, &:after {
+    background-color: $white;
+  }
+  &:before {
+    top: $spacing-l;
+  }
+}
+
+.sectionAfterDark {
+  padding-top: 2*$spacing-l;
+  &:before {
+    display: none;
+  }
+}
+
+.sectionContent {
+  position: relative;
+  z-index: 2;
+  padding: 0 $spacing-xl;
+}
+
+@media screen and (max-width: $breakpoint-max-small) {
+  .section {
+    padding: $spacing-l 0;
+    &:before, &:after {
+      display: none;
+    }
+  }
+  .sectionContent {
+    padding: 0 $spacing-l;
+  }
+}
+
+@media screen and (max-width: $breakpoint-max-phone) {
+  .sectionContent {
+    padding: 0 $spacing-s;
+  }
+}

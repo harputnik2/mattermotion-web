@@ -1,0 +1,64 @@
+@import '../../../../styles/variables.scss';
+
+.hero {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: black;
+  position: relative;
+  margin-bottom: $spacing-l;
+}
+
+.heroBg {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  filter: brightness(70%); // remove when new video arrives
+  video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.heroSlogan {
+  color: $white;
+  text-align: center;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.heroButtons {
+  margin-top: $spacing-l;
+  display: flex;
+}
+
+@media screen and (max-width: $breakpoint-max-phone) {
+  .heroButtons {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: $spacing-xxl;
+    padding: 0 $spacing-m;
+  }
+  .heroContent {
+    top: auto;
+    transform: translate(0, 0);
+    bottom: $spacing-m;
+    height: 100%;
+    padding-top: $spacing-xxl;
+  }
+}

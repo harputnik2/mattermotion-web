@@ -1,0 +1,42 @@
+@import '../../../styles/variables.scss';
+
+.column {
+  flex: 1;
+  padding: 0 $spacing-xl;
+  &.smallPadding {
+    padding: 0 $spacing-s;
+  }
+  &.mediumPadding {
+    padding: 0 $spacing-m;
+  }
+  &.threeInRow {
+    min-width: 33.33333%;
+    max-width: 33.33333%;
+  }
+}
+
+@media screen and (max-width: $breakpoint-max-small) {
+  .column {
+    padding: 0 $spacing-l;
+    &.smallPadding {
+      padding: 0 $spacing-xs;
+    }
+    &.mediumPadding {
+      padding: 0 $spacing-s;
+    }
+    &.threeInRow {
+      min-width: 50%;
+      max-width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-max-phone) {
+  .column {
+    padding: 0 $spacing-l;
+    &.threeInRow {
+      min-width: 100%;
+      max-width: 100%;
+    }
+  }
+}
