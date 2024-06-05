@@ -1,0 +1,34 @@
+@import "styles/variables";
+
+.footer {
+  position: relative;
+  z-index: 9;
+  background-color: $dark-brown;
+  padding: $spacing-xxl;
+  &.homeFooter {
+    background-color: black;
+    filter: invert(1);
+  }
+}
+
+.logo {
+  img {
+    filter: invert(1);
+  }
+}
+
+@media screen and (max-width: $breakpoint-max-small) {
+  .footer {
+    padding: $spacing-l;
+  }
+  .logo {
+    max-width: $spacing-xxxl;
+    margin-bottom: $spacing-xl;
+  }
+}
+
+@media screen and (max-width: $breakpoint-max-phone) {
+  .logo {
+    margin-bottom: $spacing-xl;
+  }
+}

@@ -11,7 +11,7 @@ export const Hero = () => {
         <div className={styles.heroBg}>
           <video muted={true} autoPlay={true} loop>
             <source
-              src='fake'
+              src='/media/video/00086400low_V1-0005.mp4'
               type="video/mp4"
             />
           </video>

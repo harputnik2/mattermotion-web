@@ -8,26 +8,26 @@ const data = {
             category: [
                 {
                     id: 1,
-                    name: 'Web Development',
+                    name: 'Virtual Tours',
                     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.',
                     animation: {
-                        url: 'https://via.placeholder.com/150',
+                        url: '/media/video/00086400low_V1-0005.mp4',
                     },
                 },
                 {
                     id: 2,
-                    name: 'Web Design',
+                    name: 'Animations',
                     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.',
                     animation: {
-                        url: 'https://via.placeholder.com/150',
+                        url: '/media/video/00086400low_V1-0005.mp4',
                     },
                 },
                 {
                     id: 3,
-                    name: 'Mobile Development',
+                    name: 'Visualizations',
                     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.',
                     animation: {
-                        url: 'https://via.placeholder.com/150',
+                        url: '/media/video/00086400low_V1-0005.mp4',
                     },
                 }
             ]
