@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import CollectionCard from '../../components/collection-card'
+import {CollectionCard} from '../../components/collection-card'
 import { Row, Column } from '../../components/ui'
 import {data, DataTypeKeys} from './data';
 import styles from './Collection.module.scss'

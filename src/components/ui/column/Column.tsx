@@ -5,7 +5,7 @@ import cx from 'classnames'
 import styles from './Column.module.scss'
 
 type Props = {
-    children: React.ReactNode,
+    children?: React.ReactNode,
     padding?: 'medium' | 'small',
     rowLimit?: 3,
 }

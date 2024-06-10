@@ -30,48 +30,85 @@ export const data: DataType = {
         name: "Visualization 1",
         description: "This is a visualization",
         poster: {
-            url: '/media/photo/Project_20211216_0009.jpeg'
-        }
-    },
-        {
-            id: 2,
-            name: "Visualization 2",
-            description: "This is a visualization 2",
-            poster: {
-                url: '/media/photo/Project_20211216_0002.jpeg'
-            }
+            url: '/media/photo/1.jpg'
         },
-    ],
+    }, {
+        id: 2,
+        name: "Visualization 2",
+        description: "This is a visualization",
+        poster: {
+            url: '/media/photo/2.jpeg'
+        },
+    }, {
+        id: 3,
+        name: "Visualization 3",
+        description: "This is a visualization",
+        poster: {
+            url: '/media/photo/3.jpeg'
+        },
+    }, {
+        id: 4,
+        name: "Visualization 4",
+        description: "This is a visualization",
+        poster: {
+            url: '/media/photo/4.jpeg'
+        },
+    }, {
+        id: 5,
+        name: "Visualization 5",
+        description: "This is a visualization",
+        poster: {
+            url: '/media/photo/5.jpeg'
+        },
+    }],
     [DataTypeKeys.ANIMATIONS]: [{
         id: 1,
         name: "Animation 1",
         description: "This is an animation",
+        poster: {
+            url: '/media/photo/6.jpeg'
+        },
         animation: {
             url: '/media/video/00086400low_V!-0002.mp4'
         },
+    }, {
+        id: 2,
+        name: "Animation 2",
+        description: "This is an animation",
         poster: {
-            url: '/media/photo/Project_20211216_0002.jpeg'
-        }
-    },
-        {
-            id: 2,
-            name: "Animation 2",
-            description: "This is an animation",
-            animation: {
-                url: '/media/video/00086400low_V!-0002.mp4'
-            },
-            poster: {
-                url: '/media/photo/Project_20211216_0002.jpeg'
-            }
+            url: '/media/photo/7.jpeg'
         },
+        animation: {
+            url: '/media/video/00086400low_V!-0002.mp4'
+        },
+    }, {
+        id: 3,
+        name: "Animation 3",
+        description: "This is an animation",
+        poster: {
+            url: '/media/photo/8.jpeg'
+        },
+        animation: {
+            url: '/media/video/00086400low_V!-0002.mp4'
+        },
+    }, {
+        id: 4,
+        name: "Animation 4",
+        description: "This is an animation",
+        poster: {
+            url: '/media/photo/9.jpeg'
+        },
+        animation: {
+            url: '/media/video/00086400low_V!-0002.mp4'
+        },
+    }
     ],
     [DataTypeKeys.VIRTUAL_TOURS]: [{
-
         id: 1,
         name: "Virtual Tour 1",
         description: "This is a virtual tour",
         poster: {
-            url: '/media/photo/Project_20211216_0009.jpeg'
+            url: '/media/photo/10.jpeg'
         },
         tourUrl: 'http://sky.easypano.com/virtual-tour/Quadrapol-Virtual-Tour-137020.html'
     }, ]
