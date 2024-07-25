@@ -1,65 +1,45 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import { useParams } from 'react-router-dom'
-// import { useQuery } from '@apollo/client'
 
-// import Loader from 'components/loader'
 import {ArtpieceSwitcher} from '../../components/artpiece-switcher'
-import {FullscreenOverlay} from '../../components/fullscreen-overlay'
-// import FullscreenButton from 'components/fullscreen-button'
-
-import { settings, propsSettings } from './settings'
 import styles from './Artpiece.module.scss'
 import {CategoryType} from '../../type';
+import FullscreenOverlay from '../../components/fullscreen-overlay';
+import {VirtualTour, Visualization} from '../../components/artpiece-type';
 
 type Props = {
   category: CategoryType,
 }
 
-export const Artpiece = ({ category }: Props) => {
+export const Artpiece = ({category}: Props) => {
   const [fullscreen, setFullscreen] = useState(false)
   const { id } = useParams()
 
-  const {
-    artpieceQuery,
-    artpieceCategory,
-    ArtpieceComponent,
-  } = settings(category)
+  // let ArtpieceComponent: Element | null;
+  // ArtpieceComponent = category === 'visualization' ? (<Visualization id={id} />) : category === 'animations' ? (
+  //   <Animations id={id} />) : category === 'virtual-tours' ? (<VirtualTour id={id} />) : null;
 
-  // const { loading, error, data } = useQuery(
-  //     artpieceQuery,
-  //     {
-  //       variables: { id: id },
-  //     },
-  // )
-
-  // if (loading) return <Loader />
-  // if (error) return <p>Error :(</p>
-
-  const artpieceProps = propsSettings(category, data)
 
   return (
     <>
       <div className={styles.artpiecePage}>
         <div className={styles.artpieceDetails}>
-          <h6>{data[artpieceCategory].name}</h6>
-          <p>{data[artpieceCategory].description}</p>
+          <h6>cdvfv</h6>
+          <p>rtbrvb</p>
         </div>
         <div className={styles.artpiecePreview}>
-          <ArtpieceComponent {...artpieceProps} />
+          {/*  artpiece component  */}
         </div>
+        {id && (
         <ArtpieceSwitcher category={category} id={id} />
+        )}
         {/* <FullscreenButton setFullscreen={setFullscreen} /> */}
       </div>
       {fullscreen &&
         <FullscreenOverlay setFullscreen={setFullscreen}>
-          <ArtpieceComponent {...artpieceProps} />
+          {/*  artpiece component  */}
         </FullscreenOverlay>
       }
     </>
   )
-}
-
-Artpiece.propTypes = {
-  category: PropTypes.string,
 }

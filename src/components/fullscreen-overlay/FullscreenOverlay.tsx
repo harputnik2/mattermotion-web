@@ -1,10 +1,12 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
-
 import styles from './FullscreenOverlay.module.scss'
 
-export default function FullscreenOverlay({ children, setFullscreen }) {
+type Props = {
+  children: React.ReactNode,
+  setFullscreen: (fullscreen: boolean) => void,
+}
+
+export const FullscreenOverlay = ({children, setFullscreen}: Props) => {
   return (
     <div className={styles.fullscreenOverlay}>
       <div className={styles.exitFullScreenHolder}>
@@ -22,9 +24,4 @@ export default function FullscreenOverlay({ children, setFullscreen }) {
       { children }
     </div>
   )
-}
-
-FullscreenOverlay.propTypes = {
-  children: PropTypes.node,
-  setFullscreen: PropTypes.any,
 }

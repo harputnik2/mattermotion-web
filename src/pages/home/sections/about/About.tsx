@@ -2,7 +2,13 @@ import React from 'react'
 
 import { Caption, Section, Row, Column } from '../../../../components/ui';
 
-export const About = () => {
+
+type Props = {
+  about_part_1: string,
+  about_part_2: string,
+}
+
+export const About = ({about_part_1, about_part_2}: Props) => {
 
   return (
     <>
@@ -10,10 +16,10 @@ export const About = () => {
         <Row>
           <Column>
             <Caption content='about me' />
-            <p>about 1</p>
+            <p>{about_part_1}</p>
           </Column>
           <Column>
-            <p>about 2</p>
+            <p>{about_part_2}</p>
           </Column>
         </Row>
       </Section>

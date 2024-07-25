@@ -1,4 +1,5 @@
 import React from 'react';
+import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 import './App.css';
 import {
     createBrowserRouter,
@@ -10,6 +11,8 @@ import {Layout} from './layout';
 import {Contact} from './pages/contact';
 import {Artpiece} from './pages/artpiece';
 import {Category} from './type';
+
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
     {
@@ -48,7 +51,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
+    <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
+    </QueryClientProvider>
   );
 }
 
