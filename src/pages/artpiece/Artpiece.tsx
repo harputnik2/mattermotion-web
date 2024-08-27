@@ -4,8 +4,8 @@ import { useParams } from 'react-router-dom'
 import {ArtpieceSwitcher} from '../../components/artpiece-switcher'
 import styles from './Artpiece.module.scss'
 import {CategoryType} from '../../type';
-import FullscreenOverlay from '../../components/fullscreen-overlay';
 import {VirtualTour, Visualization} from '../../components/artpiece-type';
+import {FullscreenOverlay} from '../../components/fullscreen-overlay';
 
 type Props = {
   category: CategoryType,
@@ -30,9 +30,9 @@ export const Artpiece = ({category}: Props) => {
         <div className={styles.artpiecePreview}>
           {/*  artpiece component  */}
         </div>
-        {id && (
-        <ArtpieceSwitcher category={category} id={id} />
-        )}
+        {/*{id && (*/}
+        {/*<ArtpieceSwitcher category={category} id={id} />*/}
+        {/*)}*/}
         {/* <FullscreenButton setFullscreen={setFullscreen} /> */}
       </div>
       {fullscreen &&

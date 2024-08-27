@@ -1,18 +1,3 @@
-import {
-  categories,
-  VISUALIZATIONS_IDS,
-  ANIMATIONS_IDS,
-  VIRTUAL_TOURS_IDS,
-} from 'consts'
-
-export const findQuery = (category) => {
-  return category === categories.VISUALIZATIONS ?
-    VISUALIZATIONS_IDS :
-    category === categories.ANIMATIONS ?
-      ANIMATIONS_IDS :
-      VIRTUAL_TOURS_IDS
-}
-
 export const getPrevAndNextId = (idsArray, currentId) => {
   const idsArrayLength = idsArray.length
   const currentIdIndex = idsArray.indexOf(currentId)

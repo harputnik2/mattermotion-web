@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { findQuery, getPrevAndNextId } from './utils'
+import {getPrevAndNextId} from './utils'
 
 import styles from './ArtpieceSwitcher.module.scss'
 import {CategoryType} from '../../type';

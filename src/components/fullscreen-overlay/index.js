@@ -1,3 +1,1 @@
-import FullscreenOverlay from './FullscreenOverlay.tsx'
-
-export default FullscreenOverlay
+export {FullscreenOverlay} from './FullscreenOverlay'

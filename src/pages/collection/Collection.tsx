@@ -5,13 +5,24 @@ import {CollectionCard} from '../../components/collection-card'
 import { Row, Column } from '../../components/ui'
 import {data, DataTypeKeys} from './data';
 import styles from './Collection.module.scss'
+import {useQueryHomepage} from '../../api/homepage';
+import {useQueryVisualizations} from '../../api/visualizations';
 
 type Props = {
     category: string;
 }
-export default function Collection({category}: Props) {
+export const Collection = ({category}: Props) => {
 
-    console.log(category);
+  const { data: visualizationsData, isLoading } = useQueryVisualizations();
+
+  // if (!data || !Array.isArray(data) || data.length === 0) {
+  //   return <div>No data available</div>;
+  // }
+  //
+  // const visualizations = visualizationsData[0];
+  // const {visualization_name, visualization_description, visualization_image} = visualizationsData;
+
+  console.log(visualizationsData);
 
   return (
     <>
