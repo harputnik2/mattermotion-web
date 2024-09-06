@@ -1,0 +1,1 @@
+export {VirtualTours} from './VirtualTours';

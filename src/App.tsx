@@ -11,6 +11,9 @@ import {Layout} from './layout';
 import {Contact} from './pages/contact';
 import {Artpiece} from './pages/artpiece';
 import {Category} from './type';
+import {Visualizations} from './pages/visualizations';
+import {Animations} from './pages/animations';
+import {VirtualTours} from './pages/virtual-tours';
 
 const queryClient = new QueryClient();
 
@@ -21,15 +24,15 @@ const router = createBrowserRouter([
     },
     {
         path: "/virtual-tours",
-        element: <Layout><Collection category={Category.VIRTUAL_TOURS} /></Layout>,
+        element: <Layout><VirtualTours /></Layout>,
     },
     {
         path: "/animations",
-        element: <Layout><Collection category={Category.ANIMATIONS} /></Layout>,
+        element: <Layout><Animations /></Layout>,
     },
     {
         path: "/visualizations",
-        element: <Layout><Collection category={Category.VISUALIZATIONS} /></Layout>,
+        element: <Layout><Visualizations /></Layout>,
     },
     {
         path: "/virtual-tours/:id",

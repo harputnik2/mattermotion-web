@@ -1,7 +1,7 @@
 import {useQuery} from '@tanstack/react-query';
 
 const fetchVisualizations = async () => {
-  const resp = await fetch('http://mattermotion.com/szymon_admin/wp-json/wp/v2/visualizations');
+  const resp = await fetch('http://mattermotion.com/szymon_admin/wp-json/wp/v2/visualization');
   if (!resp.ok) {
     throw new Error('Network response was not ok');
   }
@@ -10,7 +10,7 @@ const fetchVisualizations = async () => {
 
 export const useQueryVisualizations = () => {
   return useQuery({
-    queryKey: ['visualiazations'],
+    queryKey: ['visualizations'],
     queryFn: fetchVisualizations,
   });
 };

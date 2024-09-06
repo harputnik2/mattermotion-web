@@ -1,28 +1,16 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-
 import {CollectionCard} from '../../components/collection-card'
 import { Row, Column } from '../../components/ui'
-import {data, DataTypeKeys} from './data';
 import styles from './Collection.module.scss'
-import {useQueryHomepage} from '../../api/homepage';
 import {useQueryVisualizations} from '../../api/visualizations';
+import {CategoryType} from '../../type';
+import {ArtPiece} from '../../type/artpiece';
 
 type Props = {
-    category: string;
+    category: CategoryType;
+    collection: ArtPiece[];
 }
-export const Collection = ({category}: Props) => {
-
-  const { data: visualizationsData, isLoading } = useQueryVisualizations();
-
-  // if (!data || !Array.isArray(data) || data.length === 0) {
-  //   return <div>No data available</div>;
-  // }
-  //
-  // const visualizations = visualizationsData[0];
-  // const {visualization_name, visualization_description, visualization_image} = visualizationsData;
-
-  console.log(visualizationsData);
+export const Collection = ({category, collection}: Props) => {
 
   return (
     <>
@@ -31,15 +19,13 @@ export const Collection = ({category}: Props) => {
           {category.replace(/([A-Z])/g, ' $1')}
         </h4>
         <Row padding='small' forceMobileColumns={true}>
-          {data[category as DataTypeKeys].slice(0).reverse().map((artpiece: any) => (
+          {collection.map((artpiece: ArtPiece) => (
             <Column key={artpiece.id} padding='small' rowLimit={3}>
               <CollectionCard
                 id={artpiece.id}
-                title={artpiece.name}
+                title={artpiece.item_name}
                 description={artpiece.description}
-                image={
-                  artpiece.image ? artpiece.image.url : artpiece.poster.url
-                }
+                image={artpiece.poster.guid}
                 category={category}
               />
             </Column>
@@ -48,8 +34,4 @@ export const Collection = ({category}: Props) => {
       </div>
     </>
   )
-}
-
-Collection.propTypes = {
-  category: PropTypes.string,
 }
