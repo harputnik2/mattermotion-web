@@ -13,13 +13,14 @@
 
 .artpiecePreview {
   margin: 0 (-$spacing-l);
-  padding: 0 $spacing-xxl;
   overflow: hidden;
   background-color: $passepartout;
   text-align: center;
-  img {
-    margin-bottom: -10px;
-    width: 100%;
+  position: relative;
+  &Inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -32,17 +33,6 @@
   }
   p {
     font-size: 80%;
-  }
-}
-
-@media screen and (min-width: $breakpoint-min-huge) {
-  .artpiecePreview {
-    img {
-      max-height: calc(100vh - 290px);
-      min-height: 920px;
-      max-width: 100%;
-      width: auto;
-    }
   }
 }
 

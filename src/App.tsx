@@ -6,14 +6,14 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import {Home} from "./pages/home";
-import {Collection} from "./pages/collection";
 import {Layout} from './layout';
 import {Contact} from './pages/contact';
-import {Artpiece} from './pages/artpiece';
+import {VisualizationPage} from './pages/visualization';
 import {Category} from './type';
 import {Visualizations} from './pages/visualizations';
 import {Animations} from './pages/animations';
 import {VirtualTours} from './pages/virtual-tours';
+import {AnimationPage} from './pages/animation';
 
 const queryClient = new QueryClient();
 
@@ -36,15 +36,15 @@ const router = createBrowserRouter([
     },
     {
         path: "/virtual-tours/:id",
-        element: <Layout><Artpiece category={Category.VIRTUAL_TOURS} /></Layout>,
+        element: <Layout><VisualizationPage /></Layout>,
     },
     {
         path: "/animations/:id",
-        element: <Layout><Artpiece category={Category.ANIMATIONS} /></Layout>,
+        element: <Layout><AnimationPage /></Layout>,
     },
     {
         path: "/visualizations/:id",
-        element: <Layout><Artpiece category={Category.VISUALIZATIONS} /></Layout>,
+        element: <Layout><VisualizationPage /></Layout>,
     },
     {
         path: "/contact",

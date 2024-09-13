@@ -14,3 +14,19 @@ export const useQueryVisualizations = () => {
     queryFn: fetchVisualizations,
   });
 };
+
+const fetchVisualization = async (id?: string) => {
+  const resp = await fetch(`http://mattermotion.com/szymon_admin/wp-json/wp/v2/visualization/${id}`);
+  if (!resp.ok) {
+    throw new Error('Network response was not ok');
+  }
+  return resp.json();
+};
+
+export const useQueryVisualization = (id?: string) => {
+  return useQuery({
+    queryKey: ['visualization'],
+    queryFn: () => fetchVisualization(id),
+    enabled: Boolean(id),
+  });
+};

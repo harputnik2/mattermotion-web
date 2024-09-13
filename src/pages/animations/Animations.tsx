@@ -1,11 +1,12 @@
 import React from 'react'
-import {useQueryVisualizations} from '../../api/visualizations';
 import {Category} from '../../type';
-import {Collection} from '../collection';
+import {Collection} from '../../components/collection';
+import {useQueryAnimations} from '../../api/animations';
+import {Loader} from '../../components/loader';
 
 export const Animations = () => {
 
-  const { data: collection, isLoading } = useQueryVisualizations();
+  const { data: collection, isLoading } = useQueryAnimations();
 
-  return isLoading ? (<p>is loading</p>) : (<Collection category={Category.ANIMATIONS} collection={collection} />);
+  return isLoading ? (<Loader />) : (<Collection category={Category.ANIMATIONS} collection={collection} />);
 }

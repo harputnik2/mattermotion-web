@@ -4,9 +4,18 @@ import { CategoryCard } from './category-card';
 
 type Props = {
     teasers: {
-        virtual_tours_teaser: string,
-        animations_teaser: string,
-        visualizations_teaser: string,
+      virtual_tours_teaser: string,
+      virtual_tours_poster: {
+        guid: string,
+      },
+      animations_teaser: string,
+      animations_poster: {
+        guid: string,
+      },
+      visualizations_teaser: string,
+      visualizations_poster: {
+        guid: string,
+      },
     }
 }
 
@@ -22,17 +31,17 @@ export const WhatWeDo = ({teasers}: Props) => {
               <CategoryCard
                 categoryName='Virtual Tours'
                 categoryTeaser={teasers.virtual_tours_teaser}
-                categoryVideo={''}
+                categoryVideo={teasers.virtual_tours_poster.guid}
               />
               <CategoryCard
                 categoryName='Animations'
                 categoryTeaser={teasers.animations_teaser}
-                categoryVideo={''}
+                categoryVideo={teasers.animations_poster.guid}
               />
               <CategoryCard
                 categoryName='Visualizations'
                 categoryTeaser={teasers.visualizations_teaser}
-                categoryVideo={''}
+                categoryVideo={teasers.visualizations_poster.guid}
               />
           </Column>
         </Row>

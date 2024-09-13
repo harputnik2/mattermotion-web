@@ -2,17 +2,35 @@ import React from 'react';
 import { Hero, About, WhatWeDo, Contact } from './sections';
 import styles from './Home.module.scss';
 import {useQueryHomepage} from '../../api/homepage';
+import {Loader} from '../../components/loader';
 
 export const Home = () => {
   const { data, isLoading } = useQueryHomepage();
 
-  if (!data || !Array.isArray(data) || data.length === 0) {
-    return <div>No data available</div>;
+  if (isLoading || !data || !Array.isArray(data) || data.length === 0) {
+    return <Loader />;
   }
 
   const homepageData = data[0];
-  const {about_part_1, about_part_2, virtual_tours_teaser, animations_teaser, visualizations_teaser} = homepageData;
-  const teasers = {virtual_tours_teaser, animations_teaser, visualizations_teaser};
+  const {
+    about_part_1,
+    about_part_2,
+    virtual_tours_teaser,
+    virtual_tours_poster,
+    animations_teaser,
+    animations_poster,
+    visualizations_teaser,
+    visualizations_poster,
+  } = homepageData;
+
+  const teasers = {
+    virtual_tours_teaser,
+    virtual_tours_poster,
+    animations_teaser,
+    animations_poster,
+    visualizations_teaser,
+    visualizations_poster,
+  };
 
   return (
     <div className={styles.home}>

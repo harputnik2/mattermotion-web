@@ -1,5 +1,4 @@
 import React from 'react'
-// import Loader from 'components/loader'
 
 import { Caption, Section, Row, Column, Button } from '../../components/ui'
 
@@ -7,10 +6,6 @@ import styles from './Contact.module.scss'
 
 
 export const Contact = () => {
-  // const { loading, error, data } = useQuery(CONTACT)
-
-  // if (loading) return <Loader />
-  // if (error) return <p>Error :(</p>
 
   return (
     <div className={styles.contact}>

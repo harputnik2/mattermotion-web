@@ -1,11 +1,12 @@
 import React from 'react'
-import {useQueryVisualizations} from '../../api/visualizations';
 import {Category} from '../../type';
-import {Collection} from '../collection';
+import {Collection} from '../../components/collection';
+import {useQueryVirtualTours} from '../../api/virtualTours';
+import {Loader} from '../../components/loader';
 
 export const VirtualTours = () => {
 
-  const { data: collection, isLoading } = useQueryVisualizations();
+  const { data: collection, isLoading } = useQueryVirtualTours();
 
-  return isLoading ? (<p>is loading</p>) : (<Collection category={Category.VIRTUAL_TOURS} collection={collection} />);
+  return isLoading ? (<Loader />) : (<Collection category={Category.VIRTUAL_TOURS} collection={collection} />);
 }
