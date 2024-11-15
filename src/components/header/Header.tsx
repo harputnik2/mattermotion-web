@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Nav from '../nav'
-
-import logo from '../../static/logo_icon.svg'
-
 import cx from 'classnames'
 
+import logo from '../../static/logo_icon.svg'
 import styles from './Header.module.scss'
 
 type Props = {

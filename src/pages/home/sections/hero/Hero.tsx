@@ -1,9 +1,13 @@
 import React from 'react'
-import { Button } from '../../../../components/ui/button';
+import { Button } from '../../../../components/ui';
 
 import styles from './Hero.module.scss'
 
-export const Hero = () => {
+type Props = {
+  video: string
+}
+
+export const Hero = ({video}: Props) => {
 
   return (
     <>
@@ -11,7 +15,7 @@ export const Hero = () => {
         <div className={styles.heroBg}>
           <video muted={true} autoPlay={true} loop>
             <source
-              src='/media/video/00086400low_V1-0005.mp4'
+              src={video}
               type="video/mp4"
             />
           </video>

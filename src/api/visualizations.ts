@@ -1,7 +1,7 @@
 import {useQuery} from '@tanstack/react-query';
 
 const fetchVisualizations = async () => {
-  const resp = await fetch('http://mattermotion.com/szymon_admin/wp-json/wp/v2/visualization');
+  const resp = await fetch('https://mattermotion.com/szymon_admin/wp-json/wp/v2/visualization');
   if (!resp.ok) {
     throw new Error('Network response was not ok');
   }
@@ -16,7 +16,7 @@ export const useQueryVisualizations = () => {
 };
 
 const fetchVisualization = async (id?: string) => {
-  const resp = await fetch(`http://mattermotion.com/szymon_admin/wp-json/wp/v2/visualization/${id}`);
+  const resp = await fetch(`https://mattermotion.com/szymon_admin/wp-json/wp/v2/visualization/${id}`);
   if (!resp.ok) {
     throw new Error('Network response was not ok');
   }

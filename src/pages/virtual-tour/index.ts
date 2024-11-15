@@ -1,0 +1,1 @@
+export {VirtualTourPage} from './VirtualTourPage';

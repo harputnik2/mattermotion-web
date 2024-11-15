@@ -12,7 +12,9 @@ export const Home = () => {
   }
 
   const homepageData = data[0];
+
   const {
+    homepage_background_video,
     about_part_1,
     about_part_2,
     virtual_tours_teaser,
@@ -34,7 +36,7 @@ export const Home = () => {
 
   return (
     <div className={styles.home}>
-        <Hero />
+        <Hero video={homepage_background_video.guid} />
         <About about_part_1={about_part_1} about_part_2={about_part_2} />
         <WhatWeDo teasers={teasers} />
         <Contact />
