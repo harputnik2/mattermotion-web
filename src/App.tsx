@@ -16,6 +16,7 @@ const queryClient = new QueryClient();
 
 // Use the environment variable for basename
 const baseUrl = process.env.REACT_APP_BASENAME || '/';
+console.log('baseUrl', baseUrl);
 
 function App() {
     return (
