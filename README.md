@@ -1,3 +1,5 @@
+This is a reincarnation of my husband's website, fed with data from headless wordpress.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
