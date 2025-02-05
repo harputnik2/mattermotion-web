@@ -6,10 +6,11 @@ import styles from './Button.module.scss'
 type Props = {
     content: string,
     color?: string,
+    onClick?: () => void,
 }
-export const Button = ({ content, color }: Props) => {
+export const Button = ({ content, color, onClick }: Props) => {
   return (
-    <button className={
+    <button onClick={onClick} className={
       cx(styles.button,
           { [styles.darkButton]: color === 'dark' },
       )
