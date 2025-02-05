@@ -51,12 +51,13 @@ export default function Nav({ color, orientation, setMenuVisible }: Props) {
       }
     >
       {links.map((link, index) => {
+        const isCurrentAndIsNotHome = currentLocation.startsWith(link.to) && link.to !== '/'
         return (
           <Link
             key={index}
             className={
               cx(styles.navItem,
-                  { [styles.active]: currentLocation.startsWith(link.to) },
+                  { [styles.active]: currentLocation === link.to || isCurrentAndIsNotHome },
               )
             }
             to={link.to}

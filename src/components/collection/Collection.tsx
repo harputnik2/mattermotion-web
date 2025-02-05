@@ -2,7 +2,6 @@ import React from 'react'
 import {CollectionCard} from '../collection-card'
 import { Row, Column } from '../ui'
 import styles from './Collection.module.scss'
-import {useQueryVisualizations} from '../../api/visualizations';
 import {CategoryType} from '../../type';
 import {ArtPiece} from '../../type/artpiece';
 

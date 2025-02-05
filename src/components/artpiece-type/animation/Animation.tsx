@@ -21,7 +21,7 @@ export const Animation = ({animation}: Props) => {
         <video
           className={styles.video}
           muted={true}
-          autoPlay={false}
+          autoPlay
           loop
           poster={poster}
           preload="auto"
