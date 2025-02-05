@@ -26,7 +26,7 @@ const fetchAnimation = async (id?: string) => {
 
 export const useQueryAnimation = (id?: string) => {
   return useQuery({
-    queryKey: ['animation'],
+    queryKey: ['animation', id],
     queryFn: () => fetchAnimation(id),
     enabled: Boolean(id),
   });

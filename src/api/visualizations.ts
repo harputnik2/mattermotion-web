@@ -25,7 +25,7 @@ const fetchVisualization = async (id?: string) => {
 
 export const useQueryVisualization = (id?: string) => {
   return useQuery({
-    queryKey: ['visualization'],
+    queryKey: ['visualization', id],
     queryFn: () => fetchVisualization(id),
     enabled: Boolean(id),
   });

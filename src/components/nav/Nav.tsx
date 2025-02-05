@@ -56,7 +56,7 @@ export default function Nav({ color, orientation, setMenuVisible }: Props) {
             key={index}
             className={
               cx(styles.navItem,
-                  { [styles.active]: currentLocation === link.to },
+                  { [styles.active]: currentLocation.startsWith(link.to) },
               )
             }
             to={link.to}

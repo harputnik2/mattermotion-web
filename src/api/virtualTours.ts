@@ -25,7 +25,7 @@ const fetchVirtualTour = async (id?: string) => {
 
 export const useQueryVirtualTour = (id?: string) => {
   return useQuery({
-    queryKey: ['virtualTour'],
+    queryKey: ['virtualTour', id],
     queryFn: () => fetchVirtualTour(id),
     enabled: Boolean(id),
   });
